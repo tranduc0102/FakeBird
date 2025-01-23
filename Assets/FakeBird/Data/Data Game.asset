@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd7f2ae7c1ec46479164d8578374889, type: 3}
+  m_Name: Data Game
+  m_EditorClassIdentifier: 
+  DataWalls:
+  - name: Wood
+    id: 1
+    healthPoint: 4
+    Sprites:
+    - {fileID: 21300000, guid: b5229bad094ce524db97a5cf92f6d2df, type: 3}
+    - {fileID: 21300000, guid: 92b250f53e48fc246b1724c0d7ff4fa1, type: 3}
+    - {fileID: 21300000, guid: 93a446590b51a41448eff18b0ea67388, type: 3}
+  - name: Stone
+    id: 2
+    healthPoint: 8
+    Sprites:
+    - {fileID: 21300000, guid: e9c2ca82791b7a644b8e3cddd51d1db3, type: 3}
+    - {fileID: 21300000, guid: 8671e10ca7463c149bce36c2ec00eace, type: 3}
+    - {fileID: 21300000, guid: 2fbea05cc0ec27f44bcc8780be91bf41, type: 3}
+  - name: Meta
+    id: 3
+    healthPoint: 12
+    Sprites:
+    - {fileID: 21300000, guid: 589761c66f867e345b34d807ce17c154, type: 3}
+    - {fileID: 21300000, guid: 711bd8cf7f928424fab778cdd36721b5, type: 3}
+    - {fileID: 21300000, guid: aeadc52898f4bed42876ef23622a6e56, type: 3}
+  DataBullet:
+  - name: Blue level1
+    sprite: {fileID: 21300000, guid: b7fee49df4fa2ac41b47d8c90f22ddc7, type: 3}
+    damage: 1
+  - name: Blue level2
+    sprite: {fileID: 21300000, guid: 6c4c7e4fb7fc92e469fd39d52a11d380, type: 3}
+    damage: 2
+  - name: Blue level3
+    sprite: {fileID: 21300000, guid: bcd1bfbdc3b2ab349a9d893369ec7a5b, type: 3}
+    damage: 3
