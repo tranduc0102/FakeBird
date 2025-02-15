@@ -16,6 +16,7 @@ public class MovementBackgroud : MonoBehaviour
 
    private void FixedUpdate()
    {
+      if(GameManager.Instance.mode == ModeGame.EndGame) return;
       transform.Translate(smoothSpeed*Vector2.left);
       if (transform.position.x <= posReturn)
       {

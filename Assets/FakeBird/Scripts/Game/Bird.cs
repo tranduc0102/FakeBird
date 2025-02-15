@@ -13,7 +13,7 @@ public class Bird : MonoBehaviour
     }
     
     void Update()
-    {
+    { 
         if (transform.position.y > maxHeight)
         {
             transform.position = new Vector2(transform.position.x, maxHeight);
