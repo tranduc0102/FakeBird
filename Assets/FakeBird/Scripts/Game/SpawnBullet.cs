@@ -20,11 +20,7 @@ public class SpawnBullet : MonoBehaviour
 
     private void Start()
     {
-        if (bulletPrefabs == null)
-        {
-            bulletPrefabs = Resources.Load<Bullet>("Bullet");
-        }
-        Spawn();
+        timeSpawnBullet = timeDelaySpawn;
     }
     void Update()
     {
@@ -39,6 +35,7 @@ public class SpawnBullet : MonoBehaviour
         }
     }
     void Spawn(){
+        if(bulletPrefabs == null) return;
         Bullet bullet = PoolingManager.Spawn(bulletPrefabs, transform.position,Quaternion.Euler(0f, 0f, -90));
         bullet.Init(dataBullet);
     }

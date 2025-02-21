@@ -73,6 +73,9 @@ public class GameManager : Singleton<GameManager>
         DeActiveWall();
         Scorce = 0;
         backGround.position = originBackGround;
+        index = 0;
+        _spawnBullet.DataBullet = _dataGame.DataBullet[index];
+        _spawnWall.DataWall = _dataGame.DataWalls[0];
         UIManager.Instance.PlayAgain();
     }
 
@@ -86,6 +89,6 @@ public class GameManager : Singleton<GameManager>
 
     public void BackHome()
     {
-        //SceneManager.LoadSceneAsync("Home");
+        SceneManager.LoadSceneAsync("Home");
     }
 }

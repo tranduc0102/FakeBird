@@ -38,16 +38,11 @@ public class UILose : MonoBehaviour
         txtHighScore.text = "Hight Score: " + PlayerPrefs.GetInt("HightScore", 0);
         transform.localScale = Vector3.zero;
         _canvasGroup.DOFade(1, 0.2f);
-        transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBounce);
+        transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
     }
 
     private void OnDestroy()
     {
         transform.DOKill();
-    }
-
-    private void OnDisable()
-    {
-        _canvasGroup.DOFade(0, 0.2f);
     }
 }

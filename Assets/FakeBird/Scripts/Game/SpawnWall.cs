@@ -24,7 +24,7 @@ public class SpawnWall : MonoBehaviour
     private void Start()
     {
         heightCam = Camera.main.orthographicSize;
-        SpawmWall();
+        time = timeSpawn;
     }
 
     private void Update()
@@ -56,6 +56,7 @@ public class SpawnWall : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
+            if(wallPrefab == null) return;
             Wall wall = PoolingManager.Spawn(wallPrefab, new Vector3(positionXSpawn, newPosition[i], 0), quaternion.identity, transform);
             wall.Init(_dataWall);
             wall.transform.localScale = new Vector3(1, newHeight[i]);

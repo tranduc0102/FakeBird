@@ -5,8 +5,16 @@ public class Bird : MonoBehaviour
 {
     [SerializeField] private float forceJump;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private RuntimeAnimatorController[] _runtimeAnimatorControllers;
     public float maxHeight;
     public float minHeight;
+
+    private void Awake()
+    {
+        _animator.runtimeAnimatorController = _runtimeAnimatorControllers[PlayerPrefs.GetInt("IDSelectPlayer", 0)];
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
